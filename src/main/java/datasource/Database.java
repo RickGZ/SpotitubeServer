@@ -36,7 +36,7 @@ public class Database {
         try {
             connection = DriverManager.getConnection(connectionString);
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "Can't establish a database connection.", e);
+            logger.log(Level.SEVERE, "Failed to connect to database", e);
         }
         
         return connection;
