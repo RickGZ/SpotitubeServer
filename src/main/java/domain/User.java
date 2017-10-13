@@ -8,11 +8,11 @@ public class User {
         //
     }
 
-    public String getUsername() {
+    public String getUser() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUser(String username) {
         this.username = username;
     }
 
