@@ -1,6 +1,5 @@
 package datasource;
 
-import domain.User;
 
 public class UserDAO implements IUserDAO {
 
