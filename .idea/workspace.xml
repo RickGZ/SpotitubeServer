@@ -21,7 +21,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="663">
               <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
               <folding />
             </state>
@@ -42,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding>
                 <element signature="e#193#194#0" expanded="true" />
               </folding>
@@ -53,8 +53,8 @@
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="328">
+              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,11 +62,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Playlists.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlists.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="e#204#205#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#523#524#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Track.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Track.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datasource/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="459">
+              <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1507898550584" expanded="true" signature="382:436" ph="SELECT * fro... User" />
@@ -78,8 +115,8 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datasource/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#556#557#0" expanded="true" />
@@ -132,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/main/java/services/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Playlists.java" />
       </list>
     </option>
   </component>
@@ -154,6 +192,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="9" />
@@ -180,6 +221,7 @@
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,7 +297,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,12 +490,13 @@
       <updated>1507793541117</updated>
       <workItem from="1507793545268" duration="637000" />
       <workItem from="1507794331201" duration="1609000" />
-      <workItem from="1507877698315" duration="15826000" />
+      <workItem from="1507877698315" duration="16203000" />
+      <workItem from="1508146778074" duration="792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24665000" />
+    <option name="totallyTimeSpent" value="25834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -474,13 +516,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -521,20 +563,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="e#193#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1507898550584" expanded="true" signature="382:436" ph="SELECT * fro... User" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IUserDAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/datasource/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -607,25 +711,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="663">
           <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/IUserDAO.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar!/com/mysql/jdbc/PreparedStatement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="432" column="0" lean-forward="false" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,24 +737,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datasource/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#556#557#0" expanded="true" />
@@ -669,23 +754,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1507898550584" expanded="true" signature="382:436" ph="SELECT * fro... User" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="328">
+          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1507898550584" expanded="true" signature="382:436" ph="SELECT * fro... User" />
+            <element signature="e#193#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
           </folding>
         </state>
       </provider>
