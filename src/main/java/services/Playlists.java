@@ -41,4 +41,24 @@ public class Playlists {
 
         return playlists;
     }
+
+
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/:id/tracks")
+    public JsonArray loadTracksInPlaylist() {
+
+        System.out.println("loading tracks in playlist");
+
+        JsonObject track = Json.createObjectBuilder().add("id", 1).add("title", "testtitel").
+                add("performer", "testperformer").add("duration", 100).add("album", "testalbum").
+                add("playcount", 0).add("publicationDate", 10000000).add("description", "kekkerino").
+                add("offlineAvailable", true).build();
+
+        JsonArray tracks = Json.createArrayBuilder().add(track).build();
+
+        return tracks;
+
+    }
 }
