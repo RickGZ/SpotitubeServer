@@ -2,7 +2,7 @@ package domain;
 
 import java.util.ArrayList;
 
-public class Playlists {
+public class Playlist {
     private int id;
     private String name;
     private boolean owner;
