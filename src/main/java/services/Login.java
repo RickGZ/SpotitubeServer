@@ -22,7 +22,6 @@ public class Login {
         UserDAO userDAO = new UserDAO();
 
         if(userDAO.findUserByUsernameAndPassword(user.getUser(), user.getPassword())) {
-            System.out.println("heuj!");
             JsonObject jo = Json.createObjectBuilder().add("token", "1234-1234-1234").add("user", user.getUser()).build();
 
             return jo;
