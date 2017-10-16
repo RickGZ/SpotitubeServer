@@ -43,11 +43,10 @@ public class Playlists {
     }
 
 
-    @GET
+    @GET @Path("/1/tracks")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/:id/tracks")
-    public JsonArray loadTracksInPlaylist() {
+    public JsonObject loadTracksInPlaylist() {
 
         System.out.println("loading tracks in playlist");
 
@@ -58,7 +57,9 @@ public class Playlists {
 
         JsonArray tracks = Json.createArrayBuilder().add(track).build();
 
-        return tracks;
+        JsonObject tracksObject = Json.createObjectBuilder().add("tracks", tracks).build();
+
+        return tracksObject;
 
     }
 }
