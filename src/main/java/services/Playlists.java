@@ -1,5 +1,8 @@
 package services;
 
+import datasource.PlaylistsDAO;
+import domain.User;
+
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
@@ -16,26 +19,33 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject loadPlaylists() {
+        User user = new User();
 
         System.out.println("playlists laden");
 
-
-        JsonObject track = Json.createObjectBuilder().add("id", 2).add("title", "testtitel").
-                add("performer", "testperformer").add("duration", 100).add("album", "testalbum").
-                add("playcount", 0).add("publicationDate", 10000000).add("description", "kekkerino").
-                add("offlineAvailable", true).build();
-
-        JsonArray tracks = Json.createArrayBuilder().add(track).build();
+        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
 
 
-        JsonObject playlist = Json.createObjectBuilder().add("id", 1).add("name", "test").
-                add("owner", true).add("tracks", tracks).build();
+        JsonObject playlists = playlistsDAO.findAllPlaylists(user);
 
-        JsonArray playlistArray = Json.createArrayBuilder().add(playlist).build();
-
-        JsonObject playlists = Json.createObjectBuilder().add("playlists", playlistArray).
-                add("length", 100).build();
-
+//        JsonObject track = Json.createObjectBuilder().add("id", 2).add("title", "testtitel").
+//                add("performer", "testperformer").add("duration", 100).add("album", "testalbum").
+//                add("playcount", 0).add("publicationDate", 10000000).add("description", "kekkerino").
+//                add("offlineAvailable", true).build();
+//
+//        JsonArray tracks = Json.createArrayBuilder().add(track).build();
+//
+//
+//        JsonObject playlist = Json.createObjectBuilder().add("id", 1).add("name", "test").
+//                add("owner", true).add("tracks", tracks).build();
+//
+//        JsonArray playlistArray = Json.createArrayBuilder().add(playlist).build();
+//
+//        JsonObject playlists = Json.createObjectBuilder().add("playlists", playlistArray).
+//                add("length", 100).build();
+//
+//
+//        return playlists;
 
         return playlists;
     }

@@ -1,19 +1,19 @@
 package datasource;
 
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
+import domain.User;
+
+import javax.json.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PlaylistsDAO extends Database {
 
-    public JsonObject findAllPlaylists() {
+    public JsonObject findAllPlaylists(User user) {
         PreparedStatement statement = null;
         ResultSet result = null;
 
-        JsonArray playlistArray = Json.createArrayBuilder();
+        JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
 
         try {
             statement = connection.prepareStatement("SELECT * from Playlist");
@@ -27,11 +27,39 @@ public class PlaylistsDAO extends Database {
 
         try {
             result.beforeFirst();
-            result.next();
 
+            if(!result.next()) {
+                System.out.println("No records found!");
+            }
+            else {
+                do{
+                    boolean owner;
+                    JsonArray emptyArray = Json.createArrayBuilder().build();
+
+                    if(result.getString("owner") == user.getUser()) {
+                        owner = true;
+                    }
+                    else {
+                        owner = false;
+                    }
+
+                    JsonObject playlist = Json.createObjectBuilder().add("id", result.getInt("id")).
+                            add("name", result.getString("name")).add("owner", owner).
+                            add("tracks", emptyArray).build();
+
+                    arrayBuilder.add(playlist);
+
+                } while(result.next());
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        JsonArray playlists = arrayBuilder.build();
+
+        JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).build();
+
+        return playlistReturnable;
 
 
     }
