@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class PlaylistsDAO extends Database {
 
-    public JsonObject findAllPlaylists(User user) {
+    public JsonObject findAllPlaylists(String user) {
         PreparedStatement statement = null;
         ResultSet result = null;
 
@@ -36,12 +36,14 @@ public class PlaylistsDAO extends Database {
                     boolean owner;
                     JsonArray emptyArray = Json.createArrayBuilder().build();
 
-                    if(result.getString("owner") == user.getUser()) {
+                    if(result.getString("owner").equals(user)) {
                         owner = true;
                     }
                     else {
                         owner = false;
                     }
+
+                    System.out.println(result.getString("owner") + " - " + user);
 
                     JsonObject playlist = Json.createObjectBuilder().add("id", result.getInt("id")).
                             add("name", result.getString("name")).add("owner", owner).

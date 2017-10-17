@@ -19,14 +19,13 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject loadPlaylists() {
-        User user = new User();
 
         System.out.println("playlists laden");
 
         PlaylistsDAO playlistsDAO = new PlaylistsDAO();
 
 
-        JsonObject playlists = playlistsDAO.findAllPlaylists(user);
+        JsonObject playlists = playlistsDAO.findAllPlaylists(UserSingleton.getUser());
 
 //        JsonObject track = Json.createObjectBuilder().add("id", 2).add("title", "testtitel").
 //                add("performer", "testperformer").add("duration", 100).add("album", "testalbum").

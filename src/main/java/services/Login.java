@@ -18,7 +18,8 @@ public class Login {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject attemptLogin(User user) {
-        System.out.println("hoi");
+        UserSingleton.setUser(user.getUser());
+
         UserDAO userDAO = new UserDAO();
 
         if(userDAO.findUserByUsernameAndPassword(user.getUser(), user.getPassword())) {
