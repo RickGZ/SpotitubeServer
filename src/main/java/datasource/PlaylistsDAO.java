@@ -59,7 +59,8 @@ public class PlaylistsDAO extends Database {
 
         JsonArray playlists = arrayBuilder.build();
 
-        JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).build();
+        JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).
+                add("length", 100).build();
 
         return playlistReturnable;
 

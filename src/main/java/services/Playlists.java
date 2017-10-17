@@ -24,7 +24,6 @@ public class Playlists {
 
         PlaylistsDAO playlistsDAO = new PlaylistsDAO();
 
-
         JsonObject playlists = playlistsDAO.findAllPlaylists(UserSingleton.getUser());
 
 //        JsonObject track = Json.createObjectBuilder().add("id", 2).add("title", "testtitel").
