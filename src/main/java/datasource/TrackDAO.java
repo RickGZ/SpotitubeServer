@@ -36,6 +36,7 @@ public class TrackDAO extends Database {
             resultTrackIds.beforeFirst();
             do {
                 resultTrackIds.next();
+                System.out.println(resultTrackIds.getInt("trackId"));
                 trackIds.add(resultTrackIds.getInt("trackId"));
             } while(resultTrackIds.next());
         } catch (SQLException e) {
@@ -55,10 +56,10 @@ public class TrackDAO extends Database {
 
         try {
             resultTracks.beforeFirst();
-            resultTracks.next();
-
             do {
+                resultTracks.next();
                 for(Integer i : trackIds) {
+                    System.out.println(i);
                     if(i.equals(resultTracks.getInt("id"))) {
                         JsonObject track = Json.createObjectBuilder().
                                 add("id", resultTracks.getInt("id")).
