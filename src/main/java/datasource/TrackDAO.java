@@ -15,38 +15,14 @@ public class TrackDAO extends Database {
 
     //TODO Wederom extreem lange methode. Móet verkort worden zodra het werkt.
     public JsonObject findTracksInPlaylist(int playlistId) {
-        PreparedStatement statement = null;
-        ResultSet resultTrackIds = null;
+        PreparedStatement statement;
         ResultSet resultTracks = null;
 
-        List<Integer> trackIds= new ArrayList<Integer>();
         JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
 
         try {
-            statement = connection.prepareStatement("SELECT * from TrackInPlaylist WHERE playlistId = ?");
+            statement = connection.prepareStatement("SELECT * FROM Track t INNER JOIN TrackInPlaylist tp ON t.id = tp.trackId WHERE tp.playlistId = ?");
             statement.setInt(1, playlistId);
-
-            System.out.println(statement);
-            resultTrackIds = statement.executeQuery();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            resultTrackIds.beforeFirst();
-            do {
-                resultTrackIds.next();
-                System.out.println(resultTrackIds.getInt("trackId"));
-                trackIds.add(resultTrackIds.getInt("trackId"));
-            } while(resultTrackIds.next());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-        /////////////////////////////////////////////////
-        try {
-            statement = connection.prepareStatement("SELECT * from Track");    //Laadt zo alle tracks. is dat nodig?
 
             System.out.println(statement);
             resultTracks = statement.executeQuery();
@@ -55,27 +31,22 @@ public class TrackDAO extends Database {
         }
 
         try {
-            resultTracks.beforeFirst();
+//            resultTracks.beforeFirst();
             do {
                 resultTracks.next();
-                for(Integer i : trackIds) {
-                    System.out.println(i);
-                    if(i.equals(resultTracks.getInt("id"))) {
-                        JsonObject track = Json.createObjectBuilder().
-                                add("id", resultTracks.getInt("id")).
-                                add("title", resultTracks.getString("title")).
-                                add("performer", resultTracks.getString("performer")).
-                                add("duration", resultTracks.getInt("duration")).
-                                add("album", resultTracks.getString("album")).
-                                add("playcount", resultTracks.getInt("playcount")).
-                                add("publicationDate", resultTracks.getString("publicationDate")).
-                                add("description", resultTracks.getString("description")).
-                                add("offlineAvailable", resultTracks.getBoolean("offlineAvailable")).
-                                build();
+                JsonObject track = Json.createObjectBuilder().
+                        add("id", resultTracks.getInt("id")).
+                        add("title", resultTracks.getString("title")).
+                        add("performer", resultTracks.getString("performer")).
+                        add("duration", resultTracks.getInt("duration")).
+                        add("album", resultTracks.getString("album")).
+                        add("playcount", resultTracks.getInt("playcount")).
+                        add("publicationDate", resultTracks.getString("publicationDate")).
+                        add("description", resultTracks.getString("description")).
+                        add("offlineAvailable", resultTracks.getBoolean("offlineAvailable")).
+                        build();
 
-                        arrayBuilder.add(track);
-                    }
-                }
+                arrayBuilder.add(track);
             } while(resultTracks.next());
         } catch (SQLException e) {
             e.printStackTrace();
