@@ -4,6 +4,7 @@ import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
+import javax.xml.transform.Result;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -50,5 +51,20 @@ public class TrackDAO extends Database {
         JsonArray tracks = arrayBuilder.build();
         JsonObject returnable = Json.createObjectBuilder().add("tracks", tracks).build();
         return returnable;
+    }
+
+    public void removeTrackFromPlaylist(int trackId, int playlistId) {
+        PreparedStatement statement;
+
+        try {
+            statement = connection.prepareStatement("DELETE FROM TrackInPlaylist WHERE trackId = ? AND playlistId = ?");
+            statement.setInt(1, trackId);
+            statement.setInt(2, trackId);
+
+            statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Delete failed.");
+        }
     }
 }
