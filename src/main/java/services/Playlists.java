@@ -2,11 +2,6 @@ package services;
 
 import datasource.PlaylistsDAO;
 import datasource.TrackDAO;
-import domain.Playlist;
-import domain.User;
-
-import javax.json.Json;
-import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -38,5 +33,13 @@ public class Playlists {
 
         return tracksObject;
 
+    }
+
+    @DELETE @Path("{pId}/tracks/{tId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public JsonObject removeTrackFromPlaylist(@PathParam("pId") int playlistId, @PathParam("tId") int trackId) {
+
+        return null;
     }
 }
