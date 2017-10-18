@@ -7,8 +7,6 @@ import javax.json.JsonObject;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class TrackDAO extends Database {
 
@@ -31,9 +29,8 @@ public class TrackDAO extends Database {
         }
 
         try {
-//            resultTracks.beforeFirst();
-            do {
-                resultTracks.next();
+            resultTracks.beforeFirst();
+            while(resultTracks.next()) {
                 JsonObject track = Json.createObjectBuilder().
                         add("id", resultTracks.getInt("id")).
                         add("title", resultTracks.getString("title")).
@@ -47,7 +44,7 @@ public class TrackDAO extends Database {
                         build();
 
                 arrayBuilder.add(track);
-            } while(resultTracks.next());
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
