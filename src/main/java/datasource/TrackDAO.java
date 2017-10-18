@@ -1,6 +1,6 @@
 package datasource;
 
-public class TrackDAO {
+public class TrackDAO extends Database {
 
     //
 }

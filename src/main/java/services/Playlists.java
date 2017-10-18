@@ -1,15 +1,13 @@
 package services;
 
 import datasource.PlaylistsDAO;
+import domain.Playlist;
 import domain.User;
 
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/playlists")
@@ -49,10 +47,10 @@ public class Playlists {
     }
 
 
-    @GET @Path("/1/tracks")
+    @GET @Path("{id}/tracks")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public JsonObject loadTracksInPlaylist() {
+    public JsonObject loadTracksInPlaylist(@PathParam("id") int id) {
 
         System.out.println("loading tracks in playlist");
 

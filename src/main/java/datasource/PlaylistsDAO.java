@@ -9,6 +9,7 @@ import java.sql.SQLException;
 
 public class PlaylistsDAO extends Database {
 
+    //TODO: LANGE METHODE. opdelen in kleinere?
     public JsonObject findAllPlaylists(String user) {
         PreparedStatement statement = null;
         ResultSet result = null;
