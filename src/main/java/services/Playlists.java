@@ -1,6 +1,7 @@
 package services;
 
 import datasource.PlaylistsDAO;
+import datasource.TrackDAO;
 import domain.Playlist;
 import domain.User;
 
@@ -52,16 +53,19 @@ public class Playlists {
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject loadTracksInPlaylist(@PathParam("id") int id) {
 
-        System.out.println("loading tracks in playlist");
+//        System.out.println("loading tracks in playlist");
+//
+//        JsonObject track = Json.createObjectBuilder().add("id", 1).add("title", "testtitel").
+//                add("performer", "testperformer").add("duration", 100).add("album", "testalbum").
+//                add("playcount", 0).add("publicationDate", 10000000).add("description", "kekkerino").
+//                add("offlineAvailable", true).build();
+//
+//        JsonArray tracks = Json.createArrayBuilder().add(track).build();
 
-        JsonObject track = Json.createObjectBuilder().add("id", 1).add("title", "testtitel").
-                add("performer", "testperformer").add("duration", 100).add("album", "testalbum").
-                add("playcount", 0).add("publicationDate", 10000000).add("description", "kekkerino").
-                add("offlineAvailable", true).build();
+        TrackDAO trackDAO = new TrackDAO();
 
-        JsonArray tracks = Json.createArrayBuilder().add(track).build();
 
-        JsonObject tracksObject = Json.createObjectBuilder().add("tracks", tracks).build();
+        JsonObject tracksObject = trackDAO.findTracksInPlaylist(id);
 
         return tracksObject;
 
