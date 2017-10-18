@@ -30,7 +30,7 @@ public class PlaylistsDAO extends Database {
             result.beforeFirst();
 
             if(!result.next()) {
-                System.out.println("No records found!");
+                System.out.println("No playlists found!");
             }
             else {
                 do{

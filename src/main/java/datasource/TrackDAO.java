@@ -10,8 +10,6 @@ import java.sql.SQLException;
 
 public class TrackDAO extends Database {
 
-
-    //TODO Wederom extreem lange methode. Móet verkort worden zodra het werkt.
     public JsonObject findTracksInPlaylist(int playlistId) {
         PreparedStatement statement;
         ResultSet resultTracks = null;
