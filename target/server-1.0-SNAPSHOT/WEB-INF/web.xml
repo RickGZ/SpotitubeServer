@@ -14,11 +14,11 @@
         </init-param>
         <init-param>
             <param-name>cors.allowed.methods</param-name>
-            <param-value>GET,POST,HEAD,OPTIONS,PUT</param-value>
+            <param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
         </init-param>
         <init-param>
             <param-name>cors.allowed.headers</param-name>
-            <param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers, Access-Control-Allow-Origin</param-value>
+            <param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers</param-value>
         </init-param>
         <init-param>
             <param-name>cors.exposed.headers</param-name>
@@ -26,7 +26,7 @@
         </init-param>
         <init-param>
             <param-name>cors.support.credentials</param-name>
-            <param-value>true</param-value>
+            <param-value>false</param-value>
         </init-param>
         <init-param>
             <param-name>cors.preflight.maxage</param-name>

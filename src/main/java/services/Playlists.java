@@ -4,9 +4,7 @@ import datasource.PlaylistsDAO;
 import datasource.TrackDAO;
 import javax.json.JsonObject;
 import javax.ws.rs.*;
-import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
 @Path("/playlists")
 public class Playlists {
@@ -37,10 +35,10 @@ public class Playlists {
 
     }
 
-    @DELETE @Path("{id}/tracks/{id}")
+    @DELETE @Path("{pId}/tracks/{tId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public JsonObject removeTrackFromPlaylist(@PathParam("id") int playlistId, @PathParam("id") int trackId) {
+    public JsonObject removeTrackFromPlaylist(@PathParam("pId") int playlistId, @PathParam("tId") int trackId) {
         TrackDAO trackDAO = new TrackDAO();
 
         System.out.println("remove track aangeroepen");
