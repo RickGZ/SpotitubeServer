@@ -14,8 +14,6 @@ public class TrackDAO extends Database {
         PreparedStatement statement;
         ResultSet resultTracks = null;
 
-        JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-
         try {
             statement = connection.prepareStatement("SELECT * FROM Track t INNER JOIN TrackInPlaylist tp ON t.id = tp.trackId WHERE tp.playlistId = ?");
             statement.setInt(1, playlistId);
@@ -26,28 +24,7 @@ public class TrackDAO extends Database {
             e.printStackTrace();
         }
 
-        try {
-            resultTracks.beforeFirst();
-            while(resultTracks.next()) {
-                JsonObject track = Json.createObjectBuilder().
-                        add("id", resultTracks.getInt("id")).
-                        add("title", resultTracks.getString("title")).
-                        add("performer", resultTracks.getString("performer")).
-                        add("duration", resultTracks.getInt("duration")).
-                        add("album", resultTracks.getString("album")).
-                        add("playcount", resultTracks.getInt("playcount")).
-                        add("publicationDate", resultTracks.getString("publicationDate")).
-                        add("description", resultTracks.getString("description")).
-                        add("offlineAvailable", resultTracks.getBoolean("offlineAvailable")).
-                        build();
-
-                arrayBuilder.add(track);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        JsonArray tracks = arrayBuilder.build();
+        JsonArray tracks = createTrackArray(resultTracks);
         JsonObject returnable = Json.createObjectBuilder().add("tracks", tracks).build();
         return returnable;
     }
@@ -66,5 +43,50 @@ public class TrackDAO extends Database {
             e.printStackTrace();
             System.out.println("Delete failed.");
         }
+    }
+
+    public JsonObject findAllTracksNotInPlaylist(int playlistId) {
+        PreparedStatement statement;
+        ResultSet result = null;
+        JsonArray trackArray;
+
+        try {
+            statement = connection.prepareStatement("SELECT * FROM Track t WHERE id NOT IN (SELECT trackId FROM TrackInPlaylist WHERE playlistId = ?)");
+            statement.setInt(1, playlistId);
+
+            result = statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        trackArray = createTrackArray(result);
+    }
+
+    private JsonArray createTrackArray(ResultSet result) {
+        JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
+
+        try{
+            result.beforeFirst();
+            while(result.next()) {
+                JsonObject track = Json.createObjectBuilder().
+                        add("id", result.getInt("id")).
+                        add("title", result.getString("title")).
+                        add("performer", result.getString("performer")).
+                        add("duration", result.getInt("duration")).
+                        add("album", result.getString("album")).
+                        add("playcount", result.getInt("playcount")).
+                        add("publicationDate", result.getString("publicationDate")).
+                        add("description", result.getString("description")).
+                        add("offlineAvailable", result.getBoolean("offlineAvailable")).
+                        build();
+
+                arrayBuilder.add(track);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        JsonArray trackArray = arrayBuilder.build();
+        return trackArray;
     }
 }
