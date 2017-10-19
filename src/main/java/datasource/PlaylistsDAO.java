@@ -1,6 +1,8 @@
 package datasource;
 
+import domain.Playlist;
 import domain.User;
+import services.UserSingleton;
 
 import javax.json.*;
 import java.sql.PreparedStatement;
@@ -65,6 +67,25 @@ public class PlaylistsDAO extends Database {
 
         return playlistReturnable;
 
+
+    }
+
+    public void addPlaylist(Playlist playlist) {
+        PreparedStatement statement;
+
+        String name = playlist.getName();
+        String owner = UserSingleton.getUser();
+
+        try {
+            statement = connection.prepareStatement("INSERT INTO Playlist(name, owner) VALUES(?, ?)");
+            statement.setString(1, name);
+            statement.setString(2, owner);
+
+            System.out.println(statement);
+            statement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 }

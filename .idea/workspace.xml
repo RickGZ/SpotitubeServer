@@ -65,8 +65,8 @@
       <file leaf-file-name="Playlists.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/Playlists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="120">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,32 +86,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaylistsDAO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlaylistsDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="294">
+              <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1508336675178" expanded="true" signature="517:539" ph="SELECT * fro... Playlist" />
+                <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+                <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrackDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TrackDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datasource/TrackDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="105" column="40" lean-forward="false" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+            <state relative-caret-position="90">
+              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1508417847156" expanded="true" signature="502:521" ph="SELECT * fro... Tracks" />
-                <marker date="1508417847156" expanded="true" signature="502:598" ph="SELECT * FRO... Track" />
-                <marker date="1508417847156" expanded="true" signature="1182:1246" ph="DELETE FROM " />
-                <marker date="1508417847156" expanded="true" signature="1784:1880" ph="SELECT * FRO... Track" />
-                <marker date="1508417847156" expanded="true" signature="1823:1879" ph="SELECT track... TrackInPlaylist" />
-                <marker date="1508417847156" expanded="true" signature="3613:3653" ph="INSERT INTO TrackInPlaylist... " />
+                <marker date="1508418219072" expanded="true" signature="502:521" ph="SELECT * fro... Tracks" />
+                <marker date="1508418219072" expanded="true" signature="502:598" ph="SELECT * FRO... Track" />
+                <marker date="1508418219072" expanded="true" signature="1182:1246" ph="DELETE FROM " />
+                <marker date="1508418219072" expanded="true" signature="1784:1880" ph="SELECT * FRO... Track" />
+                <marker date="1508418219072" expanded="true" signature="1823:1879" ph="SELECT track... TrackInPlaylist" />
+                <marker date="1508418219072" expanded="true" signature="3646:3686" ph="INSERT INTO TrackInPlaylist... " />
               </folding>
             </state>
           </provider>
@@ -172,14 +173,14 @@
         <option value="$PROJECT_DIR$/src/main/java/domain/Playlists.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UserSingleton.java" />
-        <option value="$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/rest/CORSFilter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/services/Tracks.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/Playlists.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Track.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/TrackDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/Playlists.java" />
+        <option value="$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java" />
       </list>
     </option>
   </component>
@@ -206,7 +207,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="9" />
     <option name="y" value="29" />
     <option name="width" value="1346" />
@@ -504,15 +505,15 @@
       <workItem from="1507877698315" duration="16203000" />
       <workItem from="1508146778074" duration="10478000" />
       <workItem from="1508220385688" duration="7488000" />
-      <workItem from="1508307476850" duration="26469000" />
+      <workItem from="1508307476850" duration="28434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69477000" />
+    <option name="totallyTimeSpent" value="71442000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -673,7 +674,8 @@
           <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1508336675178" expanded="true" signature="517:539" ph="SELECT * fro... Playlist" />
+            <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+            <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
           </folding>
         </state>
       </provider>
@@ -714,12 +716,12 @@
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1508417847156" expanded="true" signature="502:521" ph="SELECT * fro... Tracks" />
-            <marker date="1508417847156" expanded="true" signature="502:598" ph="SELECT * FRO... Track" />
-            <marker date="1508417847156" expanded="true" signature="1182:1246" ph="DELETE FROM " />
-            <marker date="1508417847156" expanded="true" signature="1784:1880" ph="SELECT * FRO... Track" />
-            <marker date="1508417847156" expanded="true" signature="1823:1879" ph="SELECT track... TrackInPlaylist" />
-            <marker date="1508417847156" expanded="true" signature="3613:3653" ph="INSERT INTO TrackInPlaylist... " />
+            <marker date="1508418219072" expanded="true" signature="502:521" ph="SELECT * fro... Tracks" />
+            <marker date="1508418219072" expanded="true" signature="502:598" ph="SELECT * FRO... Track" />
+            <marker date="1508418219072" expanded="true" signature="1182:1246" ph="DELETE FROM " />
+            <marker date="1508418219072" expanded="true" signature="1784:1880" ph="SELECT * FRO... Track" />
+            <marker date="1508418219072" expanded="true" signature="1823:1879" ph="SELECT track... TrackInPlaylist" />
+            <marker date="1508418219072" expanded="true" signature="3646:3686" ph="INSERT INTO TrackInPlaylist... " />
           </folding>
         </state>
       </provider>
@@ -729,8 +731,8 @@
         <state relative-caret-position="136">
           <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="false" />
+            <element signature="e#217#218#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -819,7 +821,8 @@
           <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1508336675178" expanded="true" signature="517:539" ph="SELECT * fro... Playlist" />
+            <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+            <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
           </folding>
         </state>
       </provider>
@@ -1033,17 +1036,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="false" />
+            <element signature="e#217#218#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,6 +1086,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding>
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/TrackDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1508418219072" expanded="true" signature="502:521" ph="SELECT * fro... Tracks" />
+            <marker date="1508418219072" expanded="true" signature="502:598" ph="SELECT * FRO... Track" />
+            <marker date="1508418219072" expanded="true" signature="1182:1246" ph="DELETE FROM " />
+            <marker date="1508418219072" expanded="true" signature="1784:1880" ph="SELECT * FRO... Track" />
+            <marker date="1508418219072" expanded="true" signature="1823:1879" ph="SELECT track... TrackInPlaylist" />
+            <marker date="1508418219072" expanded="true" signature="3646:3686" ph="INSERT INTO TrackInPlaylist... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/Tracks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1103,48 +1133,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/Playlists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        <state relative-caret-position="120">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Track.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding>
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1508336675178" expanded="true" signature="517:539" ph="SELECT * fro... Playlist" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/TrackDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="105" column="40" lean-forward="false" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1508417847156" expanded="true" signature="502:521" ph="SELECT * fro... Tracks" />
-            <marker date="1508417847156" expanded="true" signature="502:598" ph="SELECT * FRO... Track" />
-            <marker date="1508417847156" expanded="true" signature="1182:1246" ph="DELETE FROM " />
-            <marker date="1508417847156" expanded="true" signature="1784:1880" ph="SELECT * FRO... Track" />
-            <marker date="1508417847156" expanded="true" signature="1823:1879" ph="SELECT track... TrackInPlaylist" />
-            <marker date="1508417847156" expanded="true" signature="3613:3653" ph="INSERT INTO TrackInPlaylist... " />
+            <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+            <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
           </folding>
         </state>
       </provider>

@@ -2,9 +2,11 @@ package services;
 
 import datasource.PlaylistsDAO;
 import datasource.TrackDAO;
+import domain.Playlist;
 import domain.Track;
 
 import javax.json.JsonObject;
+import javax.jws.soap.SOAPBinding;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -18,6 +20,19 @@ public class Playlists {
         System.out.println("playlists laden");
 
         PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+
+        JsonObject playlists = playlistsDAO.findAllPlaylists(UserSingleton.getUser());
+
+        return playlists;
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public JsonObject addPlaylist(Playlist playlist) {
+        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+
+        playlistsDAO.addPlaylist(playlist);
 
         JsonObject playlists = playlistsDAO.findAllPlaylists(UserSingleton.getUser());
 
