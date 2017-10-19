@@ -60,6 +60,8 @@ public class TrackDAO extends Database {
         }
 
         trackArray = createTrackArray(result);
+        JsonObject returnable = Json.createObjectBuilder().add("tracks", trackArray).build();
+        return returnable;
     }
 
     private JsonArray createTrackArray(ResultSet result) {
