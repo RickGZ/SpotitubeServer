@@ -1,5 +1,7 @@
 package datasource;
 
+import domain.Track;
+
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
@@ -90,5 +92,21 @@ public class TrackDAO extends Database {
 
         JsonArray trackArray = arrayBuilder.build();
         return trackArray;
+    }
+
+    public void addTrackToPlaylist(int playlistId, Track track) {
+        PreparedStatement statement;
+        int trackId = track.getId();
+
+        try {
+            statement = connection.prepareStatement("INSERT INTO TrackInPlaylist VALUES(?, ?)");
+            statement.setInt(1, trackId);
+            statement.setInt(2, playlistId);
+
+            System.out.println(statement);
+            statement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -1,7 +1,5 @@
 package domain;
 
-import java.util.Date;
-
 public class Track {
     private int id;
     private String title;
@@ -9,7 +7,7 @@ public class Track {
     private int duration;
     private String album;
     private int playcount;
-    private Date publicationDate;
+    private String publicationDate;
     private String description;
     private boolean offlineAvailable;
 
@@ -61,11 +59,11 @@ public class Track {
         this.playcount = playcount;
     }
 
-    public Date getPublicationDate() {
+    public String getPublicationDate() {
         return publicationDate;
     }
 
-    public void setPublicationDate(Date publicationDate) {
+    public void setPublicationDate(String publicationDate) {
         this.publicationDate = publicationDate;
     }
 

@@ -2,6 +2,8 @@ package services;
 
 import datasource.PlaylistsDAO;
 import datasource.TrackDAO;
+import domain.Track;
+
 import javax.json.JsonObject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -48,5 +50,18 @@ public class Playlists {
         JsonObject tracksObject = trackDAO.findTracksInPlaylist(playlistId);
 
         return tracksObject;
+    }
+
+    @POST @Path("{id}/tracks")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public JsonObject addTrackToPlaylist(@PathParam("id") int playlistId, Track track) {
+        TrackDAO trackDAO = new TrackDAO();
+
+        trackDAO.addTrackToPlaylist(playlistId, track);
+
+        JsonObject tracksInPlaylist = trackDAO.findTracksInPlaylist(playlistId);
+
+        return tracksInPlaylist;
     }
 }
