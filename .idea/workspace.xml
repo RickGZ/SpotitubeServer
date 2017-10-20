@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Playlists.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Playlists.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/Playlists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="464">
+              <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/services/Tracks.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+              <caret line="19" column="76" lean-forward="true" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,15 +86,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaylistsDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlaylistsDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+            <state relative-caret-position="940">
+              <caret line="103" column="32" lean-forward="false" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
-                <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
+                <marker date="1508493562065" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+                <marker date="1508493562065" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
+                <marker date="1508493562065" expanded="true" signature="2832:2873" ph="UPDATE Playl... " />
               </folding>
             </state>
           </provider>
@@ -103,7 +104,7 @@
       <file leaf-file-name="TrackDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/datasource/TrackDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="600">
               <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -179,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/main/java/services/Tracks.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Track.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/TrackDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/Playlists.java" />
         <option value="$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/Playlists.java" />
       </list>
     </option>
   </component>
@@ -505,12 +506,12 @@
       <workItem from="1507877698315" duration="16203000" />
       <workItem from="1508146778074" duration="10478000" />
       <workItem from="1508220385688" duration="7488000" />
-      <workItem from="1508307476850" duration="28434000" />
+      <workItem from="1508307476850" duration="30406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71442000" />
+    <option name="totallyTimeSpent" value="73414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -674,8 +675,9 @@
           <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
-            <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
+            <marker date="1508493562065" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+            <marker date="1508493562065" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
+            <marker date="1508493562065" expanded="true" signature="2832:2873" ph="UPDATE Playl... " />
           </folding>
         </state>
       </provider>
@@ -821,8 +823,9 @@
           <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
-            <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
+            <marker date="1508493562065" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+            <marker date="1508493562065" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
+            <marker date="1508493562065" expanded="true" signature="2832:2873" ph="UPDATE Playl... " />
           </folding>
         </state>
       </provider>
@@ -1097,9 +1100,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/datasource/TrackDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="600">
           <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1113,18 +1124,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Playlist.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="940">
+          <caret line="103" column="32" lean-forward="false" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1508493562065" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
+            <marker date="1508493562065" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
+            <marker date="1508493562065" expanded="true" signature="2832:2873" ph="UPDATE Playl... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/Tracks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <caret line="19" column="76" lean-forward="true" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1133,22 +1149,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/Playlists.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="464">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/datasource/PlaylistsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1508419729038" expanded="true" signature="572:594" ph="SELECT * fro... Playlist" />
-            <marker date="1508419729038" expanded="true" signature="2291:2337" ph="INSERT INTO Playlist... " />
           </folding>
         </state>
       </provider>

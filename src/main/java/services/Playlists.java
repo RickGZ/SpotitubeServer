@@ -79,4 +79,17 @@ public class Playlists {
 
         return tracksInPlaylist;
     }
+
+    @PUT @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public JsonObject editPlaylist(@PathParam("id") int playlistId, Playlist playlist) {
+        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+
+        playlistsDAO.editPlaylist(playlist);
+
+        JsonObject playlists = playlistsDAO.findAllPlaylists(UserSingleton.getUser());
+
+        return playlists;
+    }
 }

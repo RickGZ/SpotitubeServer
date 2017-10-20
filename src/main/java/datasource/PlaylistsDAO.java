@@ -88,4 +88,22 @@ public class PlaylistsDAO extends Database {
         }
 
     }
+
+    public void editPlaylist(Playlist playlist) {
+        PreparedStatement statement;
+
+        int playlistId = playlist.getId();
+        String newName = playlist.getName();
+
+        try{
+            statement = connection.prepareStatement("UPDATE Playlist SET name = ? WHERE id = ?");
+            statement.setString(1, newName);
+            statement.setInt(2, playlistId);
+
+            System.out.println(statement);
+            statement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
