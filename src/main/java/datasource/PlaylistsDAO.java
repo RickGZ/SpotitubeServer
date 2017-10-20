@@ -1,7 +1,6 @@
 package datasource;
 
 import domain.Playlist;
-import domain.User;
 import services.UserSingleton;
 
 import javax.json.*;
@@ -13,8 +12,10 @@ public class PlaylistsDAO extends Database {
 
     //TODO: LANGE METHODE. opdelen in kleinere?
     public JsonObject findAllPlaylists(String user) {
-        PreparedStatement statement = null;
+        PreparedStatement statement;
         ResultSet result = null;
+        boolean owner = false;
+        int totalLength = 0;
 
         JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
 
@@ -27,22 +28,16 @@ public class PlaylistsDAO extends Database {
             e.printStackTrace();
         }
 
-
         try {
             result.beforeFirst();
-
             if(!result.next()) {
                 System.out.println("No playlists found!");
             }
             else {
                 do{
-                    boolean owner;
                     JsonArray emptyArray = Json.createArrayBuilder().build();
                     if(result.getString("owner").equals(user)) {
                         owner = true;
-                    }
-                    else {
-                        owner = false;
                     }
                     System.out.println(result.getString("owner") + " - " + user);
 
@@ -52,6 +47,7 @@ public class PlaylistsDAO extends Database {
 
                     arrayBuilder.add(playlist);
 
+                    totalLength += getTotalLengthPlaylist(result.getInt("id"));
                 } while(result.next());
             }
         } catch (SQLException e) {
@@ -60,11 +56,9 @@ public class PlaylistsDAO extends Database {
 
         JsonArray playlists = arrayBuilder.build();
         JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).
-                add("length", 100).build();
+                add("length", totalLength).build();
 
         return playlistReturnable;
-
-
     }
 
     public void addPlaylist(Playlist playlist) {
@@ -117,5 +111,17 @@ public class PlaylistsDAO extends Database {
             e.printStackTrace();
         }
 
+    }
+
+    public int getTotalLengthPlaylist(int playlistId) {
+        TrackDAO trackDAO = new TrackDAO();
+        int length = 0;
+        JsonArray tracks = trackDAO.findTracksInPlaylist(playlistId).getJsonArray("tracks");
+
+        for(int i = 0; i < tracks.size(); i++) {
+            length += tracks.getJsonObject(i).getInt("duration");
+        }
+
+        return length;
     }
 }

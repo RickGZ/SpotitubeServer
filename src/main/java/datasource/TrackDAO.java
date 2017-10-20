@@ -98,7 +98,6 @@ public class TrackDAO extends Database {
         PreparedStatement statement;
         int trackId = track.getId();
 
-        //adds track to playlist
         try {
             statement = connection.prepareStatement("INSERT INTO TrackInPlaylist VALUES(?, ?)");
             statement.setInt(1, trackId);
@@ -109,7 +108,5 @@ public class TrackDAO extends Database {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 }
