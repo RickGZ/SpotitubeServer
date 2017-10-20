@@ -38,14 +38,12 @@ public class PlaylistsDAO extends Database {
                 do{
                     boolean owner;
                     JsonArray emptyArray = Json.createArrayBuilder().build();
-
                     if(result.getString("owner").equals(user)) {
                         owner = true;
                     }
                     else {
                         owner = false;
                     }
-
                     System.out.println(result.getString("owner") + " - " + user);
 
                     JsonObject playlist = Json.createObjectBuilder().add("id", result.getInt("id")).
@@ -61,7 +59,6 @@ public class PlaylistsDAO extends Database {
         }
 
         JsonArray playlists = arrayBuilder.build();
-
         JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).
                 add("length", 100).build();
 
@@ -105,5 +102,20 @@ public class PlaylistsDAO extends Database {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void deletePlaylist(int playlistId) {
+        PreparedStatement statement;
+
+        try{
+            statement = connection.prepareStatement("DELETE FROM Playlist WHERE id = ?");
+            statement.setInt(1, playlistId);
+
+            System.out.println(statement);
+            statement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }

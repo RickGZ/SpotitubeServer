@@ -92,4 +92,17 @@ public class Playlists {
 
         return playlists;
     }
+
+    @DELETE @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public JsonObject deletePlaylist(@PathParam("id") int playlistId) {
+        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+
+        playlistsDAO.deletePlaylist(playlistId);
+
+        JsonObject playlists = playlistsDAO.findAllPlaylists(UserSingleton.getUser());
+
+        return playlists;
+    }
 }
