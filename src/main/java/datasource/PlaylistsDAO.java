@@ -15,7 +15,6 @@ public class PlaylistsDAO extends Database {
         PreparedStatement statement;
         ResultSet result = null;
         boolean owner = false;
-        int totalLength = 0;
 
         JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
 
@@ -30,25 +29,18 @@ public class PlaylistsDAO extends Database {
 
         try {
             result.beforeFirst();
-            if(!result.next()) {
-                System.out.println("No playlists found!");
-            }
-            else {
-                do{
-                    JsonArray emptyArray = Json.createArrayBuilder().build();
-                    if(result.getString("owner").equals(user)) {
-                        owner = true;
-                    }
-                    System.out.println(result.getString("owner") + " - " + user);
+            while(result.next()){
+                JsonArray emptyArray = Json.createArrayBuilder().build();
+                if(result.getString("owner").equals(user)) {
+                    owner = true;
+                }
+                System.out.println(result.getString("owner") + " - " + user);
 
-                    JsonObject playlist = Json.createObjectBuilder().add("id", result.getInt("id")).
-                            add("name", result.getString("name")).add("owner", owner).
-                            add("tracks", emptyArray).build();
+                JsonObject playlist = Json.createObjectBuilder().add("id", result.getInt("id")).
+                        add("name", result.getString("name")).add("owner", owner).
+                        add("tracks", emptyArray).build();
 
-                    arrayBuilder.add(playlist);
-
-                    totalLength += getTotalLengthPlaylist(result.getInt("id"));
-                } while(result.next());
+                arrayBuilder.add(playlist);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -56,7 +48,7 @@ public class PlaylistsDAO extends Database {
 
         JsonArray playlists = arrayBuilder.build();
         JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).
-                add("length", totalLength).build();
+                add("length", getTotalLengthPlaylists()).build();
 
         return playlistReturnable;
     }
@@ -113,13 +105,19 @@ public class PlaylistsDAO extends Database {
 
     }
 
-    public int getTotalLengthPlaylist(int playlistId) {
-        TrackDAO trackDAO = new TrackDAO();
+    public int getTotalLengthPlaylists() {
+        PreparedStatement statement;
+        ResultSet result;
         int length = 0;
-        JsonArray tracks = trackDAO.findTracksInPlaylist(playlistId).getJsonArray("tracks");
 
-        for(int i = 0; i < tracks.size(); i++) {
-            length += tracks.getJsonObject(i).getInt("duration");
+        try {
+            statement = connection.prepareStatement("SELECT SUM(t.duration) AS 'duration' FROM TrackInPlaylist tip INNER JOIN Track t ON tip.trackId = t.id");
+            System.out.println(statement);
+            result = statement.executeQuery();
+            result.next();
+            length = result.getInt("duration");
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
         return length;
