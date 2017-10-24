@@ -1,7 +1,8 @@
-package services;
+package services.rest;
 
 import datasource.UserDAO;
 import domain.User;
+import services.UserSingleton;
 
 import javax.json.Json;
 import javax.json.JsonObject;

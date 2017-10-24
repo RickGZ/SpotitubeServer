@@ -1,9 +1,10 @@
-package services;
+package services.rest;
 
 import datasource.PlaylistsDAO;
 import datasource.TrackDAO;
 import domain.Playlist;
 import domain.Track;
+import services.UserSingleton;
 
 import javax.json.JsonObject;
 import javax.jws.soap.SOAPBinding;
