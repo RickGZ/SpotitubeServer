@@ -9,28 +9,35 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PlaylistsDAO extends Database {
-
-    //TODO: LANGE METHODE. opdelen in kleinere?
-    public JsonObject findAllPlaylists(String user) {
+    
+    public JsonObject findAllPlaylists(String user) throws SQLException {
         PreparedStatement statement;
         ResultSet result = null;
-        boolean owner = false;
-
-        JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
 
         try {
             statement = connection.prepareStatement("SELECT * from Playlist");
-
             System.out.println(statement);
             result = statement.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        JsonArray playlists = createPlaylistArray(user, result);
+        JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).
+                add("length", getTotalLengthPlaylists()).build();
+
+        return playlistReturnable;
+    }
+
+    private JsonArray createPlaylistArray(String user, ResultSet result) {
+        JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
+        JsonArray emptyArray = Json.createArrayBuilder().build();
+        boolean owner;
+
         try {
             result.beforeFirst();
             while(result.next()){
-                JsonArray emptyArray = Json.createArrayBuilder().build();
+                owner = false;
                 if(result.getString("owner").equals(user)) {
                     owner = true;
                 }
@@ -46,11 +53,7 @@ public class PlaylistsDAO extends Database {
             e.printStackTrace();
         }
 
-        JsonArray playlists = arrayBuilder.build();
-        JsonObject playlistReturnable = Json.createObjectBuilder().add("playlists", playlists).
-                add("length", getTotalLengthPlaylists()).build();
-
-        return playlistReturnable;
+        return arrayBuilder.build();
     }
 
     public void addPlaylist(Playlist playlist) {

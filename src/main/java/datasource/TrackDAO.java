@@ -68,10 +68,15 @@ public class TrackDAO extends Database {
 
     private JsonArray createTrackArray(ResultSet result) {
         JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-
+        boolean offlineAvailable;
         try{
             result.beforeFirst();
             while(result.next()) {
+                try{
+                    offlineAvailable = result.getBoolean("offlineAvailable");
+                } catch (SQLException e){
+                   offlineAvailable = false;
+                }
                 JsonObject track = Json.createObjectBuilder().
                         add("id", result.getInt("id")).
                         add("title", result.getString("title")).
@@ -81,7 +86,7 @@ public class TrackDAO extends Database {
                         add("playcount", result.getInt("playcount")).
                         add("publicationDate", result.getString("publicationDate")).
                         add("description", result.getString("description")).
-                        add("offlineAvailable", result.getBoolean("offlineAvailable")).
+                        add("offlineAvailable", offlineAvailable).
                         build();
 
                 arrayBuilder.add(track);
@@ -97,11 +102,13 @@ public class TrackDAO extends Database {
     public void addTrackToPlaylist(int playlistId, Track track) {
         PreparedStatement statement;
         int trackId = track.getId();
+        boolean offlineAvailable = track.isOfflineAvailable();
 
         try {
-            statement = connection.prepareStatement("INSERT INTO TrackInPlaylist VALUES(?, ?)");
+            statement = connection.prepareStatement("INSERT INTO TrackInPlaylist VALUES(?, ?, ?)");
             statement.setInt(1, trackId);
             statement.setInt(2, playlistId);
+            statement.setBoolean(3, offlineAvailable);
 
             System.out.println(statement);
             statement.execute();

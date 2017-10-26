@@ -7,7 +7,6 @@ import domain.Track;
 import services.UserSingleton;
 
 import javax.json.JsonObject;
-import javax.jws.soap.SOAPBinding;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
