@@ -8,9 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PlaylistsDAO extends Database {
-    
-    public JsonObject findAllPlaylists(String user) throws SQLException {
+public class PlaylistsDAO extends Database implements IPlaylistsDAO {
+
+    public JsonObject findAllPlaylists(String user) {
         PreparedStatement statement;
         ResultSet result = null;
 

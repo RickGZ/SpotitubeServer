@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDAO extends Database {
+public class UserDAO extends Database implements IUserDAO {
 
     public boolean findUserByUsernameAndPassword(String user, String password) {
         PreparedStatement statement = null;

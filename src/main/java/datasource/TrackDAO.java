@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class TrackDAO extends Database {
+public class TrackDAO extends Database implements ITrackDAO {
 
     public JsonObject findTracksInPlaylist(int playlistId) {
         PreparedStatement statement;

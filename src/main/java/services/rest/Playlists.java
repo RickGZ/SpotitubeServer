@@ -1,5 +1,7 @@
 package services.rest;
 
+import datasource.IPlaylistsDAO;
+import datasource.ITrackDAO;
 import datasource.PlaylistsDAO;
 import datasource.TrackDAO;
 import domain.Playlist;
@@ -11,7 +13,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/playlists")
-public class Playlists {
+public class Playlists implements IPlaylists {
 
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
@@ -19,7 +21,7 @@ public class Playlists {
     public JsonObject loadPlaylists() {
         System.out.println("playlists laden");
 
-        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+        IPlaylistsDAO playlistsDAO = new PlaylistsDAO();
 
         JsonObject playlists = playlistsDAO.findAllPlaylists(UserSingleton.getUser());
 
@@ -30,7 +32,7 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject addPlaylist(Playlist playlist) {
-        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+        IPlaylistsDAO playlistsDAO = new PlaylistsDAO();
 
         playlistsDAO.addPlaylist(playlist);
 
@@ -44,7 +46,7 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject loadTracksInPlaylist(@PathParam("id") int id) {
-        TrackDAO trackDAO = new TrackDAO();
+        ITrackDAO trackDAO = new TrackDAO();
 
         JsonObject tracksObject = trackDAO.findTracksInPlaylist(id);
 
@@ -56,7 +58,7 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject removeTrackFromPlaylist(@PathParam("pId") int playlistId, @PathParam("tId") int trackId) {
-        TrackDAO trackDAO = new TrackDAO();
+        ITrackDAO trackDAO = new TrackDAO();
 
         System.out.println("remove track aangeroepen");
 
@@ -71,7 +73,7 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject addTrackToPlaylist(@PathParam("id") int playlistId, Track track) {
-        TrackDAO trackDAO = new TrackDAO();
+        ITrackDAO trackDAO = new TrackDAO();
 
         trackDAO.addTrackToPlaylist(playlistId, track);
 
@@ -84,7 +86,7 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject editPlaylist(@PathParam("id") int playlistId, Playlist playlist) {
-        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+        IPlaylistsDAO playlistsDAO = new PlaylistsDAO();
 
         playlistsDAO.editPlaylist(playlist);
 
@@ -97,7 +99,7 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject deletePlaylist(@PathParam("id") int playlistId) {
-        PlaylistsDAO playlistsDAO = new PlaylistsDAO();
+        IPlaylistsDAO playlistsDAO = new PlaylistsDAO();
 
         playlistsDAO.deletePlaylist(playlistId);
 

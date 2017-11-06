@@ -1,5 +1,6 @@
 package services.rest;
 
+import datasource.ITrackDAO;
 import datasource.TrackDAO;
 
 import javax.json.JsonObject;
@@ -7,7 +8,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/tracks")
-public class Tracks {
+public class Tracks implements ITracks {
 
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
@@ -15,7 +16,7 @@ public class Tracks {
     public JsonObject loadTracksNotInPlaylist(@QueryParam("forPlaylist") int playlistId) {
         System.out.println("tracks nog niet in betreffende playlist laden");
 
-        TrackDAO trackDAO = new TrackDAO();
+        ITrackDAO trackDAO = new TrackDAO();
 
         JsonObject tracks = trackDAO.findAllTracksNotInPlaylist(playlistId);
 

@@ -19,7 +19,7 @@ public class Database {
 
         tryLoadJdbcDriver();
 
-        //connection = getConnection();
+        connection = getConnection();
     }
 
     public String driver() {
