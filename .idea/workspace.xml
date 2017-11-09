@@ -73,11 +73,9 @@
       <file leaf-file-name="PlaylistsDAOTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/datasource/PlaylistsDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -674,7 +672,7 @@
       <workItem from="1509609089401" duration="10000" />
       <workItem from="1510006763811" duration="7761000" />
       <workItem from="1510095711736" duration="849000" />
-      <workItem from="1510141164263" duration="22088000" />
+      <workItem from="1510141164263" duration="22462000" />
     </task>
     <servers />
   </component>
@@ -697,11 +695,11 @@
     <history-entry file="All_in_spotitubeserver - 2017.11.09 at 12h 58m 24s.xml">
       <configuration name="All in spotitubeserver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testWhetherAttemptLoginReturnsCorrectJsonObject - 2017.11.09 at 12h 15m 17s.xml">
-      <configuration name="LoginTest.testWhetherAttemptLoginReturnsCorrectJsonObject" configurationId="JUnit" />
+    <history-entry file="All_in_spotitubeserver - 2017.11.09 at 13h 14m 33s.xml">
+      <configuration name="All in spotitubeserver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LoginTest_testWhetherFailedAttemptLoginReturnsNull - 2017.11.09 at 12h 16m 41s.xml">
-      <configuration name="LoginTest.testWhetherFailedAttemptLoginReturnsNull" configurationId="JUnit" />
+    <history-entry file="All_in_spotitubeserver - 2017.11.09 at 13h 14m 58s.xml">
+      <configuration name="All in spotitubeserver" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PlaylistsTest - 2017.11.09 at 12h 31m 30s.xml">
       <configuration name="PlaylistsTest" configurationId="JUnit" />
@@ -711,7 +709,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124397000" />
+    <option name="totallyTimeSpent" value="124771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -736,9 +734,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3536184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3536184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23524962" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1203,11 +1201,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/datasource/PlaylistsDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
