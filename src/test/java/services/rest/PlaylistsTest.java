@@ -7,6 +7,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.junit.runner.RunWith;
+import services.UserSingleton;
 
 import javax.json.JsonObject;
 
@@ -32,11 +33,11 @@ public class PlaylistsTest {
         JsonObject jsonObject = mock(JsonObject.class);
 
         //act
-        when(playlistsDAO.findAllPlaylists(null)).thenReturn(jsonObject);
+        when(playlistsDAO.findAllPlaylists(UserSingleton.getUser())).thenReturn(jsonObject);
         response = playlists.loadPlaylists();
 
         //assert
-        verify(playlistsDAO).findAllPlaylists(null);
+        verify(playlistsDAO).findAllPlaylists(UserSingleton.getUser());
         assertEquals(jsonObject, response);
     }
 
@@ -47,11 +48,11 @@ public class PlaylistsTest {
         JsonObject jsonObject = mock(JsonObject.class);
 
         //act
-        when(playlistsDAO.findAllPlaylists(null)).thenReturn(jsonObject);
+        when(playlistsDAO.findAllPlaylists(UserSingleton.getUser())).thenReturn(jsonObject);
         response = playlists.addPlaylist(null);
 
         //assert
-        verify(playlistsDAO).findAllPlaylists(null);
+        verify(playlistsDAO).findAllPlaylists(UserSingleton.getUser());
         assertEquals(jsonObject, response);
     }
 
@@ -107,11 +108,11 @@ public class PlaylistsTest {
         JsonObject jsonObject = mock(JsonObject.class);
 
         //act
-        when(playlistsDAO.findAllPlaylists(null)).thenReturn(jsonObject);
+        when(playlistsDAO.findAllPlaylists(UserSingleton.getUser())).thenReturn(jsonObject);
         response = playlists.editPlaylist(0, null);
 
         //assert
-        verify(playlistsDAO).findAllPlaylists(null);
+        verify(playlistsDAO).findAllPlaylists(UserSingleton.getUser());
         assertEquals(jsonObject, response);
     }
 
@@ -122,11 +123,11 @@ public class PlaylistsTest {
         JsonObject jsonObject = mock(JsonObject.class);
 
         //act
-        when(playlistsDAO.findAllPlaylists(null)).thenReturn(jsonObject);
+        when(playlistsDAO.findAllPlaylists(UserSingleton.getUser())).thenReturn(jsonObject);
         response = playlists.deletePlaylist(0);
 
         //assert
-        verify(playlistsDAO).findAllPlaylists(null);
+        verify(playlistsDAO).findAllPlaylists(UserSingleton.getUser());
         assertEquals(jsonObject, response);
     }
 
